@@ -1,0 +1,77 @@
+@import "_variabili.scss";
+.cookie-button {
+  background-color: $colore-primario;
+  color: $pink-light-card-font;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  &:hover {
+    background-color: mix($colore-primario, #ffffff, 80%);
+  }
+}
+.contattami-button-container, .progetti-button-container { // button container (parti in comune) //
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem; // distanza dal div superiore //
+}
+.contattami-button, .progetti-button { // button (parti in comune) //
+    padding: 0.8rem 2rem;
+    font-size: $testi-card;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 80px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    filter: $shadow-card;
+}
+.inviaForm-button, .annullaForm-button { // button "invia" e "annulla" del form (parti in comune) //
+    font-family: $font-family;
+    padding: 0.8rem 2rem;
+    font-size: $form-button;
+    @media (max-width: 400px) {
+        padding: 0.8rem 1.5rem;
+        font-size: $form-button*0.85; // grandezza button "invia" e "annulla" scalati sotto i 400px
+    }
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 80px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.contattami-button { // button "contattami" (specifico) //
+    background-color: $blue-strong-card-background;
+    color: $pink-light-card-font;
+        &:hover {
+        background-color: $blue-strong-card-background-hover;
+        color: $pink-light-card-font-hover;
+    }
+}
+.progetti-button { // button "progetti" (specifico) //
+    background-color: $green-medium-card-background;
+    color: $blue-strong-card-font;
+        &:hover {
+        background-color: $green-medium-card-background-hover;
+        color: $blue-strong-card-font-hover;
+    }
+}
+.form-button-container { // form (specifico) //
+    display: flex;
+    justify-content: space-around;
+}
+.inviaForm-button { // button "invia" del form (specifico) //
+    background-color: $coloreInviaForm-button;
+    color: $coloreInviaForm-font;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: $coloreInviaFormHover-button;
+    }
+}
+.annullaForm-button { // button "annulla" del form (specifico) //
+    background-color: $coloreAnnullaForm-button;
+    color: $coloreAnnullaForm-font;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: $coloreAnnullaFormHover-button;
+    }
+}

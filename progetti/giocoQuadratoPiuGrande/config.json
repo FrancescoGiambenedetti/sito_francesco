@@ -1,0 +1,11 @@
+{
+    "timeLimit": 3,
+    "attempts": 3,
+    "colors": [
+        "#a2c2e0",
+        "#a2e0a2",
+        "#e0a2a2",
+        "#e0e0a2"
+    ],
+    "numberOfSquares": 4
+}

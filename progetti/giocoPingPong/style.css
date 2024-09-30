@@ -1,0 +1,115 @@
+html, body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffebee;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    height: 100%;
+}
+body {
+    overflow: hidden;
+}
+#start-screen {
+    text-align: center;
+    max-width: 600px;
+    margin: 60px auto 0;
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+}
+#start-screen h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+#start-screen p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+#start-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #ef5350;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+#start-button:hover {
+    background-color: #d32f2f;
+}
+#game-container {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+#ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ef5350;
+    border-radius: 50%;
+}
+#paddle {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: #ef5350;
+    bottom: 10px;
+    left: 50%;
+}
+#score, #attempts {
+    position: absolute;
+    top: 10px;
+    font-size: 24px;
+    color: #000;
+}
+#score {
+    left: 22px;
+}
+#attempts {
+    right: 22px;
+}
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    display: none;
+}
+#overlay button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #ef5350;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#overlay button:hover {
+    background-color: #d32f2f;
+}
+@media (max-width: 600px) {
+    #ball {
+        width: 15px;
+        height: 15px;
+    }
+    #paddle {
+        width: 80px;
+        height: 15px;
+    }
+}

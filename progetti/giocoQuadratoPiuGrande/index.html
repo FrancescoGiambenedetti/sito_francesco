@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trova il quadrato più grande</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="./img/favicon.png" title="favicon sito" rel="icon" type="image/x-icon">
+</head>
+<body>
+    <div id="start-screen">
+        <h1>Trova il quadrato più grande</h1>
+        <p>3 secondi ad ogni turno per trovare il quadrato più grande: hai <span id="lives"></span> vite totali!</p>
+        <button id="start-button">Inizia</button>
+    </div>
+    <div id="game-container">
+        <div id="timer">Tempo: <span id="time-remaining">2</span></div>
+        <div id="squares-container"></div>
+        <div id="attempts">Vite: <span id="attempts-remaining">3</span></div>
+        <div id="message"></div>
+        <div id="overlay"></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

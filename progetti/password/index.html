@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Password</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Scegli Password</h2>
+        <input type="password" id="password" placeholder="-" oninput="scegliPassword ()">
+        <p id="password-errore" class="messaggio-errore"></p>
+        <h2>Conferma Password</h2>
+        <input type="password" id="conferma-password" placeholder="-" oninput="confermaPassword ()">
+        <p id="conferma-password-errore" class="messaggio-errore"></p>
+        <div class="checkbox-container">
+            <input type="checkbox" id="visualizza-password" onclick="visualizzaPassword ()"> Visualizza Password
+        </div>
+        <div class="efficacia-password" style="display: none;">
+            <img id="efficacia-password-img" alt="efficacia password">
+        </div>
+        <div class="button-container">
+            <button type="button" onclick="confermaButton ()" class="conferma">Conferma</button>
+            <button type="button" onclick="annullaButton()" class="annulla">Annulla</button>
+        </div>
+    </div>
+    <script src="./javascript.js"></script>
+</body>
+</html>

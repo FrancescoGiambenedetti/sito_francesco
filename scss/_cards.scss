@@ -1,0 +1,445 @@
+@import "_variabili.scss";
+.benvenuto-card, .miPresento-card, .cosaFaccio-card, .content-card, .progetti-card, .contattami-card { // cards (parti in comune) //
+  padding: 2rem;
+  max-width: 800px;
+  @media (max-width: $media-query-breakpoint) {
+  max-width: $media-query-cards; // grandezza card scalata sotto i 900px
+}
+  margin: 2rem auto;
+  border-radius: 8px;
+  filter: $shadow-card;
+  h1 { // h1 cards (parti in comune) //
+    font-size: $titoli-card;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  h2 { // h2 cards (parti in comune) //
+    font-size: $sottotitoli-card;
+  }
+  p { // p cards (parti in comune) //
+    font-size: $testi-card;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  legend {
+    font-size: $form-placeHolder;
+  }
+}
+.cards-container { // card che contiene card "benvenuto" e "mi presento" (solo qui) //
+  gap: 2rem;
+  @media(max-width: 1200px){
+    display: inline;
+    padding: 0;
+    gap: 0;
+  }
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+  .benvenuto-card, .miPresento-card {
+    flex: 1;
+  }
+}
+.benvenuto-card { // card "benvenuto" (specifico) //
+  background-color: $blue-strong-card-background; // colore background //
+  h1, p {
+    color: $pink-light-card-font; // colore font //
+  }
+}
+.miPresento-card { // card "mi presento" (specifico) //
+  background-color: $blue-strong-card-background; // colore background //
+  h1, p {
+      color: $pink-light-card-font; // colore font //
+  }
+  #descrizione {
+    text-align: center;
+  }
+  .foto-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    .img-francesco {
+      width: 180px; // grandezza foto francesco
+      @media (max-width: 400px) {
+        width: 100px; // grandezza foto francesco scalata sotto i 400px
+      }
+      height: auto;
+      border-radius: 50%;
+    }
+  }
+}
+.skills-section { // sezione delle skills (solo qui) //
+  margin-top: 2rem;
+  h2 {
+    font-size: $sottotitoli-card;
+    color: $pink-light-card-font;
+    text-align: center;
+    margin-bottom: 1;
+  }
+}
+.skill-item {
+  margin-bottom: 1rem;
+  p {
+    font-size: $testi-card;
+    color: $pink-light-card-font;
+    margin-bottom: 0.2rem;
+  }
+}
+.progress-bar-container {
+  background-color: $colore-secondario;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 12px;
+}
+.progress-bar {
+  height: 100%;
+  transition: width 0.5s ease;
+  border-radius: 8px;
+}
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  .img-social {
+    width: 80px; // grandezza loghi social
+    padding-top: 1.5rem ;
+    @media (max-width: 400px) {
+      width: 50px; // grandezza foto loghi social scalata sotto i 400px
+    }
+    height: auto;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+.cosaFaccio-card { // card "cosa faccio" (specifico) //
+  background-color: $green-medium-card-background; // colore background //
+  h1, p {
+    color: $blue-strong-card-font; // colore font //
+  }
+  display: flex;
+  max-width: 100%;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    .cosaFaccio-left {
+      padding-right: 0;
+      text-align: center;
+    }
+    .cosaFaccio-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      video {
+        width: 80%;
+        max-width: 100%;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+        @media (max-width: $media-query-breakpoint-mobile){
+          display: none;
+        }
+      }
+    }
+  }
+  #scrittaVideo { // per nascondere la frase "nel video è presente il mio ultimo progetto" (perché da 500px tolto carosello e video) //
+  @media (max-width: $media-query-breakpoint-mobile) {
+    display: none;
+  }
+}
+#scopriProgetto { // link per collegare la scritta dell'ultimo progetto nel video, alla card specifica //
+  text-decoration: none;
+  color: $black-strong-card-font;
+  font-style: italic;
+}
+  .cosaFaccio-left {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  .cosaFaccio-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    video {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+  }
+  @media (max-width: $media-query-breakpoint) {
+    max-width: $media-query-cards;
+  }
+}
+.graficaFrontEnd, .form-container { // container della card "grafica", "front-end", "back-end" e del form (solo qui) //
+  padding: 2rem;
+  gap: 2rem;
+}
+.graficaFrontEnd { // 3 cards scalate sotto i 1200px (solo qui) //
+@media (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.progettiContainer { // container in "progetti" //
+  padding: 2rem;
+  gap: 2rem;
+}
+.content-card { // card dei 3 content "grafica", "front-end", "back-end" (specifico) //
+  background-color: $grey-light-card-background; // colore background //
+  h2, p {
+    color: $black-strong-card-font; // colore font //
+  }
+  .loghi {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    & img {
+      width: 80px; // grandezza loghi content-card //
+      @media (max-width: 400px) {
+        width: 40px; // grandezza loghi content-card scalata sotto i 400px //
+      }
+      height: auto;
+      margin: 0 10px;
+    }
+  }
+}
+.progetti-card { // card "progetti" (specifico) //
+  max-width: 100%;
+  @media (max-width: 1200px) {
+    max-width: 800px; // sscala progetti sotto 1200px e diventa come le altre cards //
+  }
+  @media (max-width: $media-query-breakpoint) {
+    max-width: $media-query-cards; // scala progetti sotto i 900px come le altre cards //
+  }
+  background-color: $green-medium-card-background;
+  h1, p {
+    color: $blue-strong-card-font;
+  }
+}
+.progetto-description { // descrizione progetti (specifico) //
+  h2, p, a { // descrizione dei progetti (parti in comune) //
+    color: $blue-strong-card-font;
+  }
+  h2 { // da qui elementi specifici //
+    text-transform: uppercase;
+    font-size: $sottotitoli-card;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: $testi-card;
+    margin-bottom: 1rem;
+  }
+  a {
+    text-decoration: none;
+    font-style: italic;
+    font-size: $link-progetti;
+  }
+  flex: 2; // per allineameto contenuti all'interno dei container progetti //
+}
+.progetti-list { // container dei singoli progetti (specifico) //
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    }
+    flex-direction: column; // mette in colonna i container dei singoli progetti //
+    gap: 2rem; // spaziatura tra i container dei singoli progetti //
+    .progetti-item { // container dei singoli progetti //
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        background-color: $grey-light-card-background;
+        border-radius: 8px;
+        padding: 1.5rem;
+        align-items: center;
+        filter: $shadow-card;
+        @media (max-width: 600px) {
+            flex-direction: column; // la foto del singolo progetto scorre sopra titolo, descrizione e link //
+            h2 {
+              text-align: center;
+            }
+        }
+        .progetto-img-container { // riguarda le img dentro i container dei singoli progetti //
+            flex: 1;
+            img {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+                border-radius: 8px;
+                @media (max-width: 600px) {
+                  width: 70%;
+                  display: block;
+                  margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+.scopri-di-piu { // inizio modifiche finestra modale progetti singoli //
+  background: none;       
+  border: none;        
+  color: $black-strong-card-font;        
+  font-style: italic;        
+  font-size: $testi-card;     
+  cursor: pointer;           
+  padding: 0;                
+}
+.modale {
+  display: none;
+  position: fixed; 
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  overflow: auto;
+}
+#titolo-modale {
+  color: $blue-strong-card-font-hover;
+  font-size: $sottotitoli-card;
+}
+#descrizione-modale {
+  color: $blue-strong-card-font-hover;
+  font-size: $testi-card;
+}
+#games-modale {
+  a {
+    color: $blue-strong-card-font-hover;
+    font-size: $testi-card;
+    text-decoration: none;
+      font-style: italic;
+  }
+}
+.specifiche-progetti {
+  color: $blue-strong-card-font-hover;
+  font-size: $testi-card;
+}
+.contenuto-modale {
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  background-color: $pink-light-card-font;
+  border-radius: 8px;
+}
+.chiudi {
+  color: $green-medium-card-background;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.chiudi:hover,
+.chiudi:focus {
+  color: $green-medium-card-background-hover;
+  text-decoration: none;
+  cursor: pointer;
+}
+.immagine-modale {
+    display: flex;             
+    justify-content: center;     
+    align-items: center;        
+    margin: 20px 0;           
+}
+.immagine-modale img {
+    max-width: 70%; // grandezza immagine nella modale dei progetti singoli //       
+    height: auto;        
+    display: block;        
+    border-radius: 10px;
+}
+#link-modale { // fine modifiche finestra modale progetti singoli //
+  text-decoration: none;
+  color: $black-strong-card-font;        
+  font-style: italic;        
+  font-size: $testi-card;
+}
+.contattami-card { // container della card "contattami" (specifico) //
+  display: flex;
+  max-width: 100%;
+  background-color: $blue-strong-card-background; // colore background //
+  h1, p {
+    color: $pink-light-card-font; // colore font //
+  }
+  @media (max-width: $media-query-breakpoint){
+    max-width: $media-query-cards;
+  }
+  display: flex;
+  max-width: 100%;
+  .contattami-left {
+    flex: 1;
+  }
+  .contattami-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    img {
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+      @media (max-width: 1200px) {
+      display: none;
+      }
+    }
+  }
+    @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    .contattami-left {
+      text-align: center;
+    }
+  }
+  @media (max-width: $media-query-breakpoint) {
+    max-width: $media-query-cards;
+  }
+}
+
+legend { // riguarda la scritta "campo obbligatorio *" del form su "contattami" (solo qui) //
+  color: $pink-light-card-font;
+  padding-bottom: 1rem;
+}
+.privacy-checkbox { // riguarda la checkbox della privacy (solo qui) //
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  font-size: $form-privacy;
+        @media (max-width: 400px) {
+        font-size: $form-privacy*0.85;
+      }
+  .checkbox-container {
+    margin-top: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    height: 100%;
+  }
+  input[type="checkbox"] {
+    margin: 0;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+  }
+  .label-container {
+    label {
+      color: $pink-light-card-font;
+      a {
+        color: $colore-primario;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

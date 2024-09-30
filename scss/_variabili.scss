@@ -1,0 +1,47 @@
+// colori //
+$colore-primario: #d32f7b;
+$colore-secondario: #333333;
+$colore-background: #f2f2f2;
+$colore-link-hover: #000;
+$coloreInviaForm-button: #4cAf50;
+$coloreInviaFormHover-button: #38973d;
+$coloreInviaForm-font: #ffffff;
+$coloreAnnullaForm-button: #f44336;
+$coloreAnnullaFormHover-button: #e31717;
+$coloreAnnullaForm-font: #ffffff;
+$coloreFormErrato: red;
+$coloreCompilazioneForm: black;
+// ombra //
+$shadow-card: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+// font
+    // tipo //
+    $font-family: 'Arial', sans-serif;
+    // grandezze //
+    $navbar-menu: 1.5em;
+    $titoli-card: 1.6em;
+    $sottotitoli-card: 1.4em;
+    $menu-hamburger: 1.3em;
+    $testi-card: 1.2em; // riguarda anche i button "contattami" e "progetti" //
+    $form-placeHolder: 0.9em;
+    $form-button: 0.9em; // riguarda i pulsanti del form "invia" e "annulla" //
+    $link-progetti: 1em; //link "visita i progetti" su card "progetti" //
+    $form-privacy: 0.7em; // riguarda la scritta checkbox sulla privacy del form e cookies inizio pagina //
+    $footer: 0.8em; // riguarda anche il banner dei cookies //
+    $img-carosel: 318px; // grandezza img carosello //
+// cards
+    // colori background //
+    $blue-strong-card-background: #1c1f2d;
+    $blue-strong-card-background-hover: #111213;
+    $green-medium-card-background: #D3D9D4;
+    $green-medium-card-background-hover: #c7cbc8;
+    $grey-light-card-background: #f3efef;
+    // colori font //
+    $pink-light-card-font: #ffffff; // in alternativa #eee5e9 (sul rosa chiaro) //
+    $pink-light-card-font-hover: #ffffff; // in alternativa #e9cfda (sul rosa chiaro) //
+    $blue-strong-card-font: black; // in alternativa #0d1950 (sul blu scuro) //
+    $blue-strong-card-font-hover: black;
+    $black-strong-card-font: black;
+// media query
+    $media-query-breakpoint: 900px;
+    $media-query-cards: 600px;
+    $media-query-breakpoint-mobile: 600px; // usato nella versione mobile per rimuovere il carosello ed il video //

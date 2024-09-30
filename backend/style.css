@@ -1,0 +1,226 @@
+/* progetti -> MANCA CSS E PROGETTO */
+
+
+
+/* parti in comune */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body { 
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f2f2f2;
+    font-size: 18px;
+}
+.nav-menu { /* menù voci */
+    background-color: #f2f2f2;
+    padding-top: 2rem;
+}
+.nav-menu a { /* menù voci */
+    margin: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333333;
+    font-style: 1.5em;
+    font-weight: bold;
+}
+.nav-menu a:hover { /* menù voci hover */
+    color: #d32f7b;
+}
+.nav-menu a.active { /* menù voce selezionata */
+    color: #d32f7b;
+}
+.containerGenerale { /* container generale */
+    margin: 2rem;
+}
+h1 { /* titolo card */
+    color: black;
+    font-size: 1.6em;
+    margin-bottom: 1.5rem;
+}
+h2 { /* sottotitoli card */
+    color: black;
+    font-size: 1.4em;
+}
+p { /* testi card */
+    color: black;
+    font-size: 1.2em;
+}
+.green { /* button verdi */
+    padding: 10px 20px;
+    border-radius: 80px;
+    border: none;
+    font-size: 0.9em;
+    margin: 5px 0;
+    margin-bottom: 2rem;
+    color: white;
+    text-transform: uppercase;
+    background-color: #4cAf50;
+    cursor: pointer;
+}
+.green:hover{ /* button verdi hover */
+    background-color: #38973d;
+}
+.red { /* button rossi */
+    padding: 10px 20px;
+    border-radius: 80px;
+    border: none;
+    font-size: 0.9em;
+    margin: 5px 0;
+    margin-bottom: 2rem;
+    color: white;
+    text-transform: uppercase;
+    background-color: #f44336;
+    cursor: pointer;
+}
+.red:hover{ /* button rossi hover */
+    background-color: #e31717;
+}
+.blue { /* button blu */
+    padding: 10px 20px;
+    border-radius: 80px;
+    border: none;
+    font-size: 0.9em;
+    margin: 5px 0;
+    margin-bottom: 2rem;
+    color: white;
+    text-transform: uppercase;
+    background-color: #3490a5;
+    cursor: pointer;
+}
+.blue:hover{ /* button rossi hover */
+    background-color: #346ea5;
+}
+/* sezione navbar (specifica) */
+strong {
+    text-transform: uppercase;
+}
+.tab-content {
+    border: none;
+}
+input[type="text"] {
+    width: 20%;
+    padding: 8px;
+    margin: 8px 0;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin: 10px 0;
+    margin-bottom: 2rem;
+}
+li a {
+    text-decoration: none;
+    color: #000;
+}
+.navbarButton {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+p.success { /* scritta verde */
+    color: green;
+}
+p.error { /* scritta rossa */
+    color: red;
+}
+.message {
+    color: green;
+}
+/* sezione carosello (specifica) */
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+}
+img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    display: inline-block;
+    font-size: 0.9em;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #3490a5;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 80px;
+    border: none;
+    margin: 5px 0;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+.custom-file-upload:hover {
+    background-color: #346ea5;
+}
+#scrittaCarosello {
+    font-size: 1em;
+}
+/* sezione skills (specifica) */
+.skill {
+    margin-bottom: 15px;
+    margin-top: 0.5rem;
+}
+.progress-bar-container {
+    width: 25%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.progress-bar {
+    height: 20px;
+    border-radius: 5px;
+}
+input[type="number"] { /* relativo all'inserimento numerico 0-100 */
+    width: 5%;
+    padding: 9px;
+    border: 1px solid #767676;
+    border-radius: 2px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"]::placeholder {
+    color: #999;
+}
+.scrittaSkills{
+    font-size: 18px;
+    padding: 6px 0;
+}
+#skillTitle {
+    font-weight: bold;
+}
+/* sezione video (specifica) */
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.video-item {
+    margin: 10px;
+}
+video {
+    max-width: 300px;
+    height: auto;
+    display: block;
+}
+#scrittaVideo {
+    font-size: 18px;
+    padding: 6px 0;
+}
+/* sezione progetti (specifica) */
+#scrittaProgetti {
+    font-size: 18px;
+}
